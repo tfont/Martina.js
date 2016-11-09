@@ -26,7 +26,6 @@ Or alternately directly through PHP.
 $data = 'http://localhost/api/getDay.php';
 $make = new MartinaJS;
 
-
 $javascript = $make->process(function () use ($data)
 {
     return text::javascript()
