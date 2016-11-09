@@ -20,7 +20,7 @@ Create readable JavaScript in PHP
     ending the change on #date
 
 
-Or alternately directly through PHP.
+Or alternately directly through PHP (_less readable_).
 
 ```php
 $data = 'http://localhost/api/getDay.php';
