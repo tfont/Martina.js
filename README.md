@@ -51,4 +51,54 @@ $javascript = $make->process(function () use ($data)
 echo $javascript;
 ```
 
+## More Examples
+
+
+    let house be an object
+    
+    set    room  within object as integer of 2
+    set kitchen  within object as boolean of true
+    set bathroom within object as 1.5
+
+Will generate in JavaScript:
+
+```javascript
+var house = {
+    room:     2,
+    kitchen:  true,
+    bathroom: '1.5'
+};
+```
+
+    let cars be null
+
+    if cars is exactly null
+        comment: ...
+    ending the if
+
+Will generate in JavaScript:
+
+```javascript
+var cars = null;
+
+if (cars === null)
+{ // ... }
+```
+
+## Plans
+
+Ideally Martina.js text will be compilable in the browser as:
+
+    <script type="text/martinajs" src="script.mjs"></script>
+    <script type="text/martinajs">
+    let cars be null
+
+    if cars is exactly null
+        comment: ...
+    ending the if
+    </script>
+
+
+*Note (long-term plans):* Eventually, a transcompiler will be created in C++ (with quick build instructions on Linux) to parse text directly into JavaScript files. Inlcuding, a PHP extension.
+
 By, Travis van der Font
